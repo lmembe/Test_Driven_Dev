@@ -27,7 +27,7 @@ public class NumberParser implements NumberParserInterface {
         //UK compare phoneNumber without dialling code
         int dialledNumberLen = dialledNumber.length();
         int userNumberLen = userNumber.length();
-        Pattern pattern = Pattern.compile(NumberParserInterface.REGEX_USA);
+        Pattern pattern = Pattern.compile(NumberParserInterface.PHONE_REGEX);
         Matcher matcher = pattern.matcher(dialledNumber);
 
         if (matcher.matches() && !dialledNumber.contains("=")) {

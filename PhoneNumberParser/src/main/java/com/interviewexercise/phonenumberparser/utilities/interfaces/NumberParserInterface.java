@@ -2,16 +2,7 @@ package com.interviewexercise.phonenumberparser.utilities.interfaces;
 
 public interface NumberParserInterface {
 
-    static String REGEX_USA = "^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\\s\\./0-9]*$";
-    static String PHONE_REGEX = "(?:(?:(?:\\+|00)44[\\s\\-\\.]?)?(?:(?:\\(?0\\)?)[\\s\\-\\.]?)?(?:\\d[\\s\\-\\.]?){10})|(?=" +
-            "\\(?\\d*\\)?[\\x20\\-\\d]*)(\\(?\\)?\\x20*\\-*\\d){11}";
-
-    // used to check if phone number has any special characters other than +
-    static  String SPECIAL_CHARS =
-            "/^(?:(?:\\(?(?:00|\\+)([1-4]\\d\\d|[1-9]\\d?)\\)?)?[\\-\\.\\ \\\\\\/]?)?((?:\\(?\\d{1,}\\)?[\\-\\.\\ \\\\\\" +
-            "/]?){0,})(?:[\\-\\.\\ \\\\\\/]?(?:#|ext\\.?|extension|x)[\\-\\.\\ \\\\\\/]?(\\d+))?$/i";
-
-            // "[!@#$%&*()_=|<>?{}\\[\\]~-]";
+    static String PHONE_REGEX = "^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\\s\\./0-9]*$";
 
     String parse(String dialledNumber, String userNumber);
 
